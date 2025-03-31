@@ -1,0 +1,16 @@
+D:\Batch\Demo\bin\Debug\net6.0-windows\Demo.exe
+D:\Batch\Demo\bin\Debug\net6.0-windows\Demo.deps.json
+D:\Batch\Demo\bin\Debug\net6.0-windows\Demo.runtimeconfig.json
+D:\Batch\Demo\bin\Debug\net6.0-windows\Demo.dll
+D:\Batch\Demo\bin\Debug\net6.0-windows\Demo.pdb
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.csproj.GenerateResource.cache
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.AssemblyInfoInputs.cache
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.AssemblyInfo.cs
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.csproj.CoreCompileInputs.cache
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.dll
+D:\Batch\Demo\obj\Debug\net6.0-windows\refint\Demo.dll
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.pdb
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.genruntimeconfig.cache
+D:\Batch\Demo\obj\Debug\net6.0-windows\ref\Demo.dll
+D:\Batch\Demo\obj\Debug\net6.0-windows\Demo.Demo.resources
