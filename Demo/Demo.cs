@@ -1,22 +1,20 @@
 using System;
-using System.Text;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace Demo
 {
     public partial class Demo : Form
     {
-        private System.Windows.Forms.Timer timer; // 定時器來每秒更新
-        private DateTime currentTime = DateTime.Now; // 記錄當前的時間
+
+        private bool isRunning = true;
 
         public Demo()
         {
             InitializeComponent();
-
-            timer = new System.Windows.Forms.Timer();
-            timer.Interval = 1000; // 每 1000 毫秒觸發一次（即 1 秒）
-            timer.Tick += new EventHandler(Timer_Tick); // 註冊定時器觸發事件
+            StartClockAsync(); // 在表單啟動時啟動時鐘
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             lblHelloWorld.Text = "Hello World";
@@ -27,16 +25,11 @@ namespace Demo
             lblHelloWorld.Text = string.Empty;
             lblCount.Text = string.Empty;
             btnCount.Text = "開始計數";
-
-            lblDateTime.Text = currentTime.ToString("yyyy/MM/dd HH:mm:ss");
-
-            // 啟動定時器
-            timer.Start();
         }
 
         private bool isCounting = false;
         private int intCount = 0;
-        private CancellationTokenSource cts;
+        private CancellationTokenSource cts =new CancellationTokenSource();
 
         private async void btnCount_Click(object sender, EventArgs e)
         {
@@ -86,12 +79,13 @@ namespace Demo
             }
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        private async void StartClockAsync()
         {
-            // 每秒更新當前時間
-            currentTime = currentTime.AddSeconds(1); // 增加 1 秒
-            lblDateTime.Text = currentTime.ToString("yyyy/MM/dd HH:mm:ss");
+            while (isRunning)
+            {
+                lblDateTime.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+                await Task.Delay(1000); // 每秒更新一次
+            }
         }
-
     }
 }
